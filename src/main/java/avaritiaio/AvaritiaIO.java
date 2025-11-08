@@ -25,7 +25,7 @@ public class AvaritiaIO {
     public static final RegiliteItem<CapacitorItem> INFINITE_CAPACITOR = ITEM_REGISTRY
             .registerItem("infinite_capacitor",
                     props -> new CapacitorItem(
-                            props.component(EIODataComponents.CAPACITOR_DATA, CapacitorData.simple(Float.MAX_VALUE))))
+                            props.component(EIODataComponents.CAPACITOR_DATA, CapacitorData.simple(999.9f))))
             .setTab(EIOCreativeTabs.MAIN);
 
 
