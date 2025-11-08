@@ -23,17 +23,16 @@ public class AvaritiaIOTooltipHandler {
     public static void addAdvancedTooltips(ItemTooltipEvent evt) {
         ItemStack forItem = evt.getItemStack();
         List<Component> components = evt.getToolTip();
-        addCapacitorTooltips(evt, forItem,components);
+        addCapacitorTooltips(evt, forItem, components);
     }
 
     @OnlyIn(Dist.CLIENT)
-    private static void addCapacitorTooltips(ItemTooltipEvent event, ItemStack itemStack,List<Component> components) {
+    private static void addCapacitorTooltips(ItemTooltipEvent event, ItemStack itemStack, List<Component> components) {
         if (itemStack.has(EIODataComponents.CAPACITOR_DATA) && itemStack.is(AvaritiaIO.INFINITE_CAPACITOR)) {
             for (int x = 0; x < components.size(); x++) {
                 if (components.get(x).getContents() instanceof TranslatableContents tc) {
                     if (tc.getKey().equals("tooltip.enderio.capacitor.base")) {
                         event.getToolTip().set(x, TooltipUtil.styledWithArgs(EIOLang.CAPACITOR_TOOLTIP_BASE, TextUtils.makeFabulous(I18n.get("tooltip.infinity"))));
-                        return;
                     }
                 }
             }
