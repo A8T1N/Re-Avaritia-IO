@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "avaritiaio:item/infinity_grinding_ball"
+  }
+}

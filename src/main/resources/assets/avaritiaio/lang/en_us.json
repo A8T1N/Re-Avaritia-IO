@@ -1,5 +1,6 @@
 {
-  "itemGroup.avaritiaio": "Example Mod Tab",
-  "block.avaritiaio.example_block": "Example Block",
-  "item.avaritiaio.example_item": "Example Item"
+  "itemGroup.avaritiaio": "Re:Avaritia IO",
+  "item.avaritiaio.infinite_capacitor": "Infinity Capacitor",
+  "item.avaritiaio.infinity_grinding_ball": "Infinity Grinding Ball",
+  "item.avaritiaio.neutronium_grinding_ball": "Neutronium Grinding Ball"
 }

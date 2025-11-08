@@ -11,6 +11,8 @@ public class AvaritiaIOCreativeTabEvents {
     public static void onBuildCreativeTab(BuildCreativeModeTabContentsEvent event) {
         if (event.getTab() == AvaritiaIO.AVARITIA_IO_TAB.get()) {
             event.accept(AvaritiaIO.INFINITE_CAPACITOR.get());
+            event.accept(AvaritiaIO.INFINITY_BALL.get());
+            event.accept(AvaritiaIO.NEUTRONIUM_BALL.get());
         }
     }
 }
