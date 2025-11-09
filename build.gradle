@@ -102,7 +102,7 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 
 dependencies {
-    compileOnly "com.enderio:enderio-base:8.0.6-alpha"
+    compileOnly "com.enderio:enderio-base:8.0.4-alpha"
     implementation "curse.maven:re-avaritia-623969:7106407"
 }
 
