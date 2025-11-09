@@ -1,0 +1,22 @@
+{
+  "type": "avaritia:shaped_table",
+  "key": {
+    "N": { "item": "avaritia:neutron_ingot" }
+  },
+  "pattern": [
+    "         ",
+    "         ",
+    "         ",
+    "    N    ",
+    "   NNN   ",
+    "    N    ",
+    "         ",
+    "         ",
+    "         "
+  ],
+  "result": {
+    "id": "avaritiaio:neutronium_grinding_ball",
+    "count": 64
+  },
+  "tier": 4
+}

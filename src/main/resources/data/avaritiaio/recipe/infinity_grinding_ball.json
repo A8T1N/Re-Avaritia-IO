@@ -1,0 +1,22 @@
+{
+  "type": "avaritia:shaped_table",
+  "key": {
+    "I": { "item": "avaritia:infinity_ingot" }
+  },
+  "pattern": [
+    "         ",
+    "         ",
+    "         ",
+    "    I    ",
+    "   III   ",
+    "    I    ",
+    "         ",
+    "         ",
+    "         "
+  ],
+  "result": {
+    "id": "avaritiaio:infinity_grinding_ball",
+    "count": 64
+  },
+  "tier": 4
+}

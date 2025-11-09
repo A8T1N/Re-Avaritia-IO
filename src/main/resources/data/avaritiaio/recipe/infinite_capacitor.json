@@ -1,0 +1,25 @@
+{
+  "type": "avaritia:shaped_table",
+  "key": {
+    "C": { "item": "avaritia:crystal_matrix_ingot" },
+    "N": { "item": "avaritia:neutron_ingot" },
+    "X": { "item": "avaritia:infinity_catalyst" },
+    "I": { "item": "avaritia:infinity_ingot" }
+  },
+  "pattern": [
+    " IIXIIII ",
+    " ICXCCCI ",
+    " ICXCCCI ",
+    " ICXCCCI ",
+    " ICXCCCI ",
+    " ICXCCCI ",
+    " IIXIIII ",
+    "  N   N  ",
+    "  N   N  "
+  ],
+  "result": {
+    "id": "avaritiaio:infinite_capacitor",
+    "count": 1
+  },
+  "tier": 4
+}
