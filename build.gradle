@@ -103,7 +103,7 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 dependencies {
     compileOnly "com.enderio:enderio-base:8.0.4-alpha"
-    compileOnly "curse.maven:re-avaritia-623969:7106407"
+    compileOnly "curse.maven:re-avaritia-623969:6640715"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
