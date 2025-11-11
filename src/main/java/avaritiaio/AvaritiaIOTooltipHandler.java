@@ -29,10 +29,10 @@ public class AvaritiaIOTooltipHandler {
     @OnlyIn(Dist.CLIENT)
     private static void addCapacitorTooltips(ItemTooltipEvent event, ItemStack itemStack, List<Component> components) {
         if (itemStack.has(EIODataComponents.CAPACITOR_DATA) && itemStack.is(AvaritiaIO.INFINITE_CAPACITOR)) {
-            for (int x = 0; x < components.size(); x++) {
-                if (components.get(x).getContents() instanceof TranslatableContents tc) {
+            for (int i = 0; i < components.size(); i++) {
+                if (components.get(i).getContents() instanceof TranslatableContents tc) {
                     if (tc.getKey().equals("tooltip.enderio.capacitor.base")) {
-                        event.getToolTip().set(x, TooltipUtil.styledWithArgs(EIOLang.CAPACITOR_TOOLTIP_BASE, TextUtils.makeFabulous(I18n.get("tooltip.infinity"))));
+                        event.getToolTip().set(i, TooltipUtil.styledWithArgs(EIOLang.CAPACITOR_TOOLTIP_BASE, TextUtils.makeFabulous(I18n.get("tooltip.infinity"))));
                     }
                 }
             }

@@ -4,7 +4,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 
-@EventBusSubscriber(modid = AvaritiaIO.MODID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = AvaritiaIO.MODID)
 public class AvaritiaIOCreativeTabEvents {
 
     @SubscribeEvent

@@ -37,19 +37,28 @@ public class AvaritiaIO {
                             props.component(EIODataComponents.CAPACITOR_DATA, CapacitorData.simple(999.9F))
                                     .rarity(ModRarities.COSMIC.getValue())));
 
+    // Grinding Balls
+    public static final RegiliteItem<MaterialItem> INFINITY_BALL = grindingBall("infinity_grinding_ball",
+            new GrindingBallData(5.0F, 5.0F, 0.01F, 2000000000));
+
+    public static final RegiliteItem<MaterialItem> NEUTRONIUM_BALL = grindingBall("neutronium_grinding_ball",
+            new GrindingBallData(1.0F, 5.0F, 0.1F, 2000000));
+
+    //Creative Tab
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> AVARITIA_IO_TAB =
             CREATIVE_MODE_TABS.register("avaritia_io", () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.avaritiaio"))
                     .icon(() -> new ItemStack(INFINITE_CAPACITOR.get()))
                     .build());
 
-    // Grinding Balls
+    public AvaritiaIO(IEventBus modEventBus, ModContainer modContainer) {
 
-    public static final RegiliteItem<MaterialItem> INFINITY_BALL = grindingBall("infinity_grinding_ball",
-            new GrindingBallData(5.0F, 5.0F, 0.01F, 2000000000));
+        REGILITE.register(modEventBus);
+        ITEM_REGISTRY.register(modEventBus);
+        CREATIVE_MODE_TABS.register(modEventBus);
 
-    public static final RegiliteItem<MaterialItem> NEUTRONIUM_BALL = grindingBall("neutronium_grinding_ball",
-            new GrindingBallData(1.0F, 5.0F, 0.1F, 2000000));
+        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+    }
 
     private static RegiliteItem<MaterialItem> grindingBall(String name, GrindingBallData grindingBallData) {
         return ITEM_REGISTRY
@@ -65,21 +74,11 @@ public class AvaritiaIO {
                 .addItemTags(EIOTags.Items.GRINDING_BALLS);
     }
 
-    public AvaritiaIO(IEventBus modEventBus, ModContainer modContainer) {
-
-        REGILITE.register(modEventBus);
-        ITEM_REGISTRY.register(modEventBus);
-        CREATIVE_MODE_TABS.register(modEventBus);
-
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
-    }
-
     @SubscribeEvent
     public static void onBuildCreativeTab(BuildCreativeModeTabContentsEvent event) {
         if (event.getTab() == AVARITIA_IO_TAB.get()) {
             event.accept(INFINITE_CAPACITOR.get());
         }
     }
-
 
 }
