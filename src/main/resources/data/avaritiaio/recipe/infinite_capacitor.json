@@ -1,10 +1,18 @@
 {
-  "type": "avaritia:shaped_table",
+  "type": "avaritia:extreme_shaped",
   "key": {
-    "C": { "item": "avaritia:crystal_matrix_ingot" },
-    "N": { "item": "avaritia:neutron_ingot" },
-    "X": { "item": "avaritia:infinity_catalyst" },
-    "I": { "item": "avaritia:infinity_ingot" }
+    "C": {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    "N": {
+      "item": "avaritia:neutronium_ingot"
+    },
+    "X": {
+      "item": "avaritia:infinity_catalyst"
+    },
+    "I": {
+      "item": "avaritia:infinity_ingot"
+    }
   },
   "pattern": [
     " IIXIIII ",

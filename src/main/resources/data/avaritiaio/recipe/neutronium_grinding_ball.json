@@ -1,7 +1,9 @@
 {
-  "type": "avaritia:shaped_table",
+  "type": "avaritia:extreme_shaped",
   "key": {
-    "N": { "item": "avaritia:neutron_ingot" }
+    "N": {
+      "item": "avaritia:neutronium_ingot"
+    }
   },
   "pattern": [
     "         ",

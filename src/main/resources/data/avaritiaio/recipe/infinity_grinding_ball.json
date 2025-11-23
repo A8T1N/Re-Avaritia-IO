@@ -1,7 +1,9 @@
 {
-  "type": "avaritia:shaped_table",
+  "type": "avaritia:extreme_shaped",
   "key": {
-    "I": { "item": "avaritia:infinity_ingot" }
+    "I": {
+      "item": "avaritia:infinity_ingot"
+    }
   },
   "pattern": [
     "         ",

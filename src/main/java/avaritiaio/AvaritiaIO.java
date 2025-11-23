@@ -9,17 +9,15 @@ import com.enderio.base.common.tag.EIOTags;
 import com.enderio.regilite.Regilite;
 import com.enderio.regilite.holder.RegiliteItem;
 import com.enderio.regilite.registry.ItemRegistry;
-import committee.nova.mods.avaritia.init.registry.ModRarities;
+import net.byAqua3.avaritia.loader.AvaritiaEnumParams;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.config.ModConfig;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -35,7 +33,7 @@ public class AvaritiaIO {
             .registerItem("infinite_capacitor",
                     props -> new CapacitorItem(
                             props.component(EIODataComponents.CAPACITOR_DATA, CapacitorData.simple(999.9F))
-                                    .rarity(ModRarities.COSMIC.getValue())));
+                                    .rarity(AvaritiaEnumParams.COSMIC_RARITY_ENUM_PROXY.getValue())));
 
     // Grinding Balls
     public static final RegiliteItem<MaterialItem> INFINITY_BALL = grindingBall("infinity_grinding_ball",
@@ -56,8 +54,6 @@ public class AvaritiaIO {
         REGILITE.register(modEventBus);
         ITEM_REGISTRY.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
-
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private static RegiliteItem<MaterialItem> grindingBall(String name, GrindingBallData grindingBallData) {
@@ -67,18 +63,11 @@ public class AvaritiaIO {
                         props -> new MaterialItem(
                                 props.component(EIODataComponents.GRINDING_BALL, grindingBallData)
                                         .rarity(name.equals("infinity_grinding_ball")
-                                                ? ModRarities.COSMIC.getValue()
-                                                : ModRarities.EPIC),
+                                                ? AvaritiaEnumParams.COSMIC_RARITY_ENUM_PROXY.getValue()
+                                                : Rarity.EPIC),
                                 false
                         ))
                 .addItemTags(EIOTags.Items.GRINDING_BALLS);
-    }
-
-    @SubscribeEvent
-    public static void onBuildCreativeTab(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTab() == AVARITIA_IO_TAB.get()) {
-            event.accept(INFINITE_CAPACITOR.get());
-        }
     }
 
 }

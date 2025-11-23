@@ -6,10 +6,8 @@
   },
   "loader": "avaritia:halo",
   "halo": {
-    "texture": "#halo",
-    "color": -1711276033,
-    "size": 6,
-    "pulse": false
+    "type": 1,
+    "alpha": 0.6
   }
 }
 
